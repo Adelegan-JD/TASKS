@@ -1,0 +1,4 @@
+festival_name = str(input("Hi. What is the name of this festival?: "))   # This accepts the name of the festival from the user
+location = str(input("Where is this festival being held?: "))   # This acceps the venue of the festival
+month_held = str(input("In what month does this festival hold?: "))   # This accepts the month the festival is always celebrated
+print(f"One of the festivals celebrated in Nigeria in the Yoruba tribe is the festival commonly known as  \"{festival_name}\". It is held at {location}, right in front of the palace. The \"{festival_name}\" is always celebrated in the month of {month_held}, every year." )
