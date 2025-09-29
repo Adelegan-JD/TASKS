@@ -1,13 +1,23 @@
-
 # Create an empty dictionary
 pricelist = {}
-# Collect the items to be bought in a list
-item = ['Cheese', 'Milk', 'Butter', 'Bread', 'Cereals']
 
-# Collect the price of the items in the list from the user
-price = list(input("Please enter the price of each item and separate them by commas: "))
+# create items list and an empty list for prices
+items = ['Milk', 'Cheese', 'Oats', 'Butter', 'Mayonnaise']
+prices= []
+for i in items:
+    amount = input(f'Please enter the price of {i}: ')
+    prices.append(amount)
 
-pricelist =  dict(zip(item, price))
+#put both lists inside the dictionary
+pricelist = dict(zip(items, prices))
 
-for i, j in enumerate(pricelist.items()):
-    print(f'{i : {j}}')
+# print each item and corresponding price in the dictionary
+for key, value in pricelist.items():
+    print(f'{key}:{value}')
+  
+# update the dictionary
+pricelist.update({'Yoghurt': 900})  
+print('Updated Dictionary\n')
+for key, value in pricelist.items():
+    print(f'{key}:{value}')
+
