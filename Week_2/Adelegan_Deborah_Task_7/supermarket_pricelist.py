@@ -5,8 +5,11 @@ pricelist = {}
 items = ['Milk', 'Cheese', 'Oats', 'Butter', 'Mayonnaise']
 prices= []
 for i in items:
-    amount = input(f'Please enter the price of {i}: ')
-    prices.append(amount)
+    amount = int(input(f'Please enter the price of {i}: '))
+    if amount.is_integer() == False:
+        print('Please enter a digit')
+    else:
+        prices.append(amount)
 
 #put both lists inside the dictionary
 pricelist = dict(zip(items, prices))
@@ -17,7 +20,7 @@ for key, value in pricelist.items():
   
 # update the dictionary
 pricelist.update({'Yoghurt': 900})  
-print('Updated Dictionary\n')
+print('\nUpdated Dictionary\n')
 for key, value in pricelist.items():
     print(f'{key}:{value}')
 
