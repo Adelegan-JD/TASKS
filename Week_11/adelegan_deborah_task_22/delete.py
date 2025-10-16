@@ -42,6 +42,6 @@ class BasicAPI(BaseHTTPRequestHandler):
         
         else:
             deleted_data = data.remove(data[record_id])
-            self.send_data({'message': 'Record deleted successfully'}, status=200)
+            self.send_data({'message': 'Record deleted successfully', "content": deleted_data}, status=200)
         
         self.send_data(data)
