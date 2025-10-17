@@ -28,13 +28,15 @@ class Update_item(BaseModel):
     track: Optional[str] = None
 
 
-
 # Create an action(patch) to update and give it a desciption for the user to see
 @app.patch("/update-data/{id}", description="This is the patch endpoint to update the file")
 def update_data(id: int, input: Update_item):   # the "input makes sure the required fields are filled with the appropriate input type"       
     updated_file = data[id].update(input.model_dump(exclude_unset=True))           # this passes the incoming input into the already-existing data dictionary
     print(updated_file)
     return {'Message': 'Data Updated', 'Data': data}
+
+# Another method(which can be used for unstructured data) will be to create an empty dictionary and update the empty dictionary with whatever the user inputs. 
+# However, this will not involve validation so any other field can be added such that the user can add extra information asides from the fields originally indicated.
 
 # Create the delete action
 @app.delete("/remove-data/{id}")
