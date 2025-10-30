@@ -18,4 +18,4 @@ pandas
 matplotlib
 seaborn
 numpy
-gdown
+scipy
