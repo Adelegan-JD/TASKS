@@ -13,7 +13,7 @@ print(f"{num1} != {num2} : {num1 != num2}")
 # Output: True
 # The "!=" sign means "Not Equal To". Thus, whhen it is used between two variables or numbers, it will generate a True statement if the numbers are not equal and a False statement if the numbers are equal
 
-print(f"{num1} > {num2} : {num1 > num2}")
+print(f"\n{num1} > {num2} : {num1 > num2}")
 # Output: 8 > 7 : True
 # This code is meant to generate a True statement if num1 is greater than num2, and a False  statement if num1 is not greater than num2
 
@@ -27,8 +27,8 @@ print(f"{num1} < {num2} : {num1< num2}")
 
 # 2. Getting percentage interest of payments made over time
 price = 20
-price *= 1.1        # This is to increase the amount by 10%
-print(price)
+price_percentage = price * 1.1        # This is to increase the amount by 10%
+print(f'\n10% increase in {price} is {price_percentage}')
 
 
 
