@@ -10,26 +10,3 @@ if items in store.keys():
         print('Sorry!', 'we do not have that amount of', items, 'currently, but we\'re restocking soon. Please check again another time.')
 else:
     print('Sorry!', items, 'is currently not available in our store. Please check again another time.')
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
